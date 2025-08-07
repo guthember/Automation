@@ -1,0 +1,53 @@
+# Rider IDE
+.idea/
+*.sln.iml
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.DotSettings.user
+
+# Visual Studio
+.vs/
+*.vcxproj.user
+*.vcxproj.filters
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# Test results
+TestResults/
+*.trx
+
+# ReSharper
+_ReSharper*/
+*.ReSharper.*
+
+# NuGet
+**/packages/*
+!**/packages/**/*.props
+!**/packages/**/*.targets
+*.nupkg
+# Ha van megoldásszintű .nuget mappa:
+# .nuget/
+
+# .NET Core / ASP.NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+publish/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# OS fájlok
+Thumbs.db
+.DS_Store
+
+# Ha VS Code-ot is használsz, engedélyezd:
+# .vscode/
