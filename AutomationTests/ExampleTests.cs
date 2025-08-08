@@ -1,4 +1,4 @@
-﻿namespace UI.Tests;
+﻿namespace AutomationTests;
 
 [TestFixture]
 public class ExampleTests

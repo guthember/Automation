@@ -1,4 +1,4 @@
-﻿namespace API.Tests;
+﻿namespace AutomationTests;
 
 public class Tests
 {

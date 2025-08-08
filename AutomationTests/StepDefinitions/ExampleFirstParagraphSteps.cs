@@ -1,4 +1,4 @@
-﻿namespace API.Tests.StepDefinitions;
+﻿namespace AutomationTests.StepDefinitions;
 
 [Binding]
 [Scope(Feature = "Example.com első bekezdés ellenőrzése")]

@@ -1,4 +1,4 @@
-﻿namespace API.Tests.StepDefinitions;
+﻿namespace AutomationTests.StepDefinitions;
 
 [Binding]
 public class ResponseValidationSteps

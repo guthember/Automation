@@ -1,6 +1,6 @@
 ﻿using HtmlAgilityPack;
 
-namespace API.Tests.StepDefinitions;
+namespace AutomationTests.StepDefinitions;
 
 [Binding]
 [Scope(Feature = "Example.com oldalon a H1 ellenőrzése")]
