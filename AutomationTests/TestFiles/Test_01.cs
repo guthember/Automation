@@ -13,8 +13,7 @@ public class Test_01 : BaseTest
     {
         // Arrange
         await using var context = await _browser.NewContextAsync();
-        var page        = await context.NewPageAsync();
-        var examplePage = new ExamplePage(page);
+        var examplePage = new ExamplePage(_page);
 
         // Act
         await examplePage.NavigateAsync();

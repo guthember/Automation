@@ -13,15 +13,13 @@ public class Test_02 : BaseTest
     {
         // Arrange
         await using var context = await _browser.NewContextAsync();
-        var page        = await context.NewPageAsync();
-        var examplePage = new ExamplePage(page);
+        var examplePage = new ExamplePage(_page);
 
         // Act
         await examplePage.NavigateAsync();
         var paragraphText = await examplePage.GetParagraphTextAsync();
 
         // Assert
-        //Assert.That(paragraphText, Is.EqualTo("This domain is for use in illustrative examples in documents. You may use this\n    domain in literature without prior coordination or asking for permission."),"nem ugyanaz a tartalom!");
         Assert.That(paragraphText, Does.Contain("This domain is for use in illustrative examples"), "Nem tartalmazza!");
     } 
 }

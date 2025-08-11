@@ -1,6 +1,6 @@
 ﻿Feature: Example.com első bekezdés ellenőrzése
 
-    Scenario: Az első paragrafus tartalmazza a várt szöveget
+    Scenario: Test_04 - Az első paragrafus tartalmazza a várt szöveget
         Given I have an HTTP client configured to "http://example.com"
         When I request the path "/"
         Then the first paragraph should contain "This domain is for use in illustrative examples"

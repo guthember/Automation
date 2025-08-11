@@ -7,6 +7,7 @@ public class BaseTest
 {
     protected IPlaywright _playwright = null!;
     protected IBrowser _browser = null!;
+    protected IPage _page = null!;
     protected BrowserConfigLoader _browserConfigLoader = null!;
     protected dynamic _defaultConfig = null!;
     
@@ -30,6 +31,7 @@ public class BaseTest
 
         _playwright = await Playwright.CreateAsync();
         _browser = await _playwright.Chromium.LaunchAsync(browserOptions);
+        _page = await _browser.NewPageAsync();
     }
 
     [OneTimeTearDown]

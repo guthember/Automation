@@ -30,13 +30,25 @@
     </ItemGroup>
 
     <ItemGroup>
+      <None Update="ConfigFiles\TestFiles\_Test_01.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="ConfigFiles\TestFiles\_Test_02.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="ConfigFiles\TestFiles\DefaultConfig.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="ConfigFiles\TestFiles\_Test_03.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="ConfigFiles\TestFiles\_Test_04.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
       <None Update="ConfigFiles\TestFiles\Test_01.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
       <None Update="ConfigFiles\TestFiles\Test_02.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="ConfigFiles\TestFiles\DefaultConfig.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
     </ItemGroup>
