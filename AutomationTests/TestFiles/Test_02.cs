@@ -9,7 +9,7 @@ public class Test_02 : BaseTest
     }
 
     [Test]
-    public async Task ExampleDotCom_HasCorrectH1()
+    public async Task ExampleDotCom_HasCorrectParagrahp()
     {
         // Arrange
         await using var context = await _browser.NewContextAsync();
