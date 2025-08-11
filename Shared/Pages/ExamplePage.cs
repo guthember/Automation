@@ -14,7 +14,12 @@ public class ExamplePage
         });
 
     private ILocator Heading => _page.Locator("h1");
+    
+    private ILocator Paragraph => _page.Locator("p:first-of-type");
 
     public async Task<string> GetHeadingTextAsync() =>
         (await Heading.TextContentAsync())?.Trim() ?? string.Empty;
+    
+    public async Task<string> GetParagraphTextAsync() =>
+        (await Paragraph.TextContentAsync())?.Trim() ?? string.Empty;
 }

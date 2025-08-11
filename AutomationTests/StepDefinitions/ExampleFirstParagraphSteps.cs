@@ -1,4 +1,6 @@
-﻿namespace AutomationTests.StepDefinitions;
+﻿using AngleSharp;
+
+namespace AutomationTests.StepDefinitions;
 
 [Binding]
 [Scope(Feature = "Example.com első bekezdés ellenőrzése")]
@@ -12,23 +14,11 @@ public class ExampleFirstParagraphSteps
     public void ThenTheFirstParagraphShouldContain(string expectedText)
     {
         var content = _ctx.Get<string>("content");
-        var startTag = "<p>";
-        var endTag   = "</p>";
+        var context = BrowsingContext.New(Configuration.Default);
+        var document = context.OpenAsync(req => req.Content(content)).Result;
+        var firstP = document.QuerySelector("p");
 
-        var start = content.IndexOf(startTag,
-            System.StringComparison.OrdinalIgnoreCase);
-        Assert.That(start, Is.GreaterThanOrEqualTo(0),
-            "Nem található <p> nyitó tag a válaszban.");
-
-        start += startTag.Length;
-        var end = content.IndexOf(endTag, start,
-            System.StringComparison.OrdinalIgnoreCase);
-        Assert.That(end, Is.GreaterThanOrEqualTo(0),
-            "Nem található </p> záró tag a válaszban.");
-
-        var paragraph = content[start..end].Trim();
-        Assert.That(paragraph,
-            Does.Contain(expectedText),
-            $"A bekezdés tartalma: '{paragraph}', de vártuk: '{expectedText}'.");
+        Assert.That(firstP, Is.Not.Null, "Nem található <p> tag.");
+        Assert.That(firstP.TextContent.Contains(expectedText), Is.True, $"Az első <p> tag nem tartalmazza a '{expectedText}' szöveget.");
     }
 }

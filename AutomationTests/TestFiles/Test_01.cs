@@ -1,26 +1,11 @@
-﻿namespace AutomationTests;
+﻿namespace AutomationTests.TestFiles;
 
 [TestFixture]
-public class ExampleTests
+public class Test_01 : BaseTest
 {
-    private IPlaywright _playwright = null!;
-    private IBrowser    _browser    = null!;
-
-    [OneTimeSetUp]
-    public async Task OneTimeSetUpAsync()
+    protected override string GetTestConfigFileName()
     {
-        _playwright = await Playwright.CreateAsync();
-        _browser    = await _playwright.Chromium.LaunchAsync(new()
-        {
-            Headless = false
-        });
-    }
-
-    [OneTimeTearDown]
-    public async Task OneTimeTearDownAsync()
-    {
-        await _browser.CloseAsync();
-        _playwright.Dispose();
+        return "Test_01.json";
     }
 
     [Test]
